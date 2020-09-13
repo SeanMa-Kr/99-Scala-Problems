@@ -9,12 +9,15 @@ Cloned from
 
 ## Instruction
 
-[problems list][problems-en]
+[problems list (en)][problems-en]
 
-[problems-en]: https://github.com/99XProblems/99-Scala-Problems/blob/master/docs/problems.en.md
+[문제 목록 (한국어)][problems-kr]
+
+[problems-en]: https://github.com/SeanMa-Kr/99-Scala-Problems/blob/master/docs/problems.en.md
+[problems-kr]: https://github.com/SeanMa-Kr/99-Scala-Problems/blob/master/docs/problems.kr.md
 
 ## Solutions
 
 Solution written in Korean can be found [here][Seanblog]
 
-[Seanblog]: https://sean-ma.tistory.com/
+[Seanblog]: https://sean-ma.tistory.com/category/Languages/Scala-99-Problems
