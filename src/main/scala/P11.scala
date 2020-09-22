@@ -1,9 +1,15 @@
 package org.p99.scala
 
+import org.p99.scala.P09.pack
+
 object P11 {
 
-  def encodeModified[T](list:List[T]):List[Any] = {
-    P10.encode(list).map(i => if (i._1 == 1) i._2 else i)
+  def encodeModified[T](list: List[T]): List[Any] = {
+    def innerEncodeModified[T](pList: List[List[T]]): List[Any] = pList match {
+      case Nil => Nil
+      case head :: tail => (if (head.length > 1) (head.length, head.head) else head.head) :: innerEncodeModified(tail)
+    }
+    innerEncodeModified(pack(list))
   }
 
 }

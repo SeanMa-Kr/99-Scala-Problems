@@ -2,6 +2,9 @@ package org.p99.scala
 
 object P17 {
 
-  // TODO
+  def split[T](n: Int, list: List[T]): (List[T], List[T]) = {
+    if (n >= list.length) throw new IndexOutOfBoundsException
+    else (list.take(n), list.takeRight(list.length - n))
+  }
 
 }
