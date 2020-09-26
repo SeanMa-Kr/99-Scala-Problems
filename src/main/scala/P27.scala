@@ -4,12 +4,11 @@ import org.p99.scala.P26.combinations
 
 object P27 {
 
-  def group3[T](list:List[T]): List[List[List[List[T]]]] = {
-    combinations(2, list) map {
-      subList2Item => combinations(3, list filter (l2st => !subList2Item.contains(l2st))) map {
-        subList3Item => subList2Item :: subList3Item :: List(list filter(lst => !(subList2Item.contains(lst) || subList3Item.contains(lst))))
-      }
-    }
-  }
+  def group3[T](list: List[T]): List[List[List[T]]] =
+    for {
+      lst3 <- combinations(2, list)
+      tgt4 = list filterNot (lst3 contains _)
+      lst4 <- combinations(3, tgt4)
+    } yield List(lst3, lst4, tgt4 filterNot (lst4 contains _))
 
 }
