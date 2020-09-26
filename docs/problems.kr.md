@@ -151,7 +151,7 @@ Example:
 
 ### P07 (medium)
 
-Flatten a nested list structure.
+중첩된 구조의 리스트를 평탄화(flatten) 하는 함수를 작성하시오.
 
 Example:
 
@@ -160,9 +160,8 @@ Example:
 
 ### P08 (medium)
 
-Eliminate consecutive duplicates of list elements. If a list contains repeated
-elements they should be replaced with a single copy of the element. The order
-of the elements should not be changed.
+리스트 내에 연속하여 중복된 원소들을 제거하는 함수를 작성하시오. 만약 리스트가 반복되는
+원소를 가지고 있다면 단일 원소로 대체되어야 하며, 원소들의 순서는 변경되어서는 안된다.
 
 Example:
 
@@ -171,8 +170,9 @@ Example:
 
 ### P09 (medium)
 
-Pack consecutive duplicates of list elements into sublists. If a list contains
-repeated elements they should be placed in separate sublists.
+리스트 내에 연속하여 중복된 원소들을 리스트 안의 리스트, 즉 하위 리스트(sublist)로 
+압축하는 함수를 작성하시오. 이 떄, 연속하여 중복된 리스트의 원소들은 종류별로 분리하여 
+순서대로 하위 리스트(sublist)로 압축되어야 한다.
 
 Example:
 
@@ -181,9 +181,9 @@ Example:
 
 ### P10 (easy)
 
-Run-length encoding of a list. Use the result of problem P09 to implement the
-so-called run-length encoding data compression method. Consecutive duplicates
-of elements are encoded as tuples (N, E) where N is the number of duplicates of
+P09의 결과값을 사용하여 주어진 리스트를 Run-length encoding하여 반환하는 함수를 작성하시오.
+Run-length encoding이란 데이터 압축 방법 중의 하나로, 연속하여 중복된 원소를 E, 중복된 횟수를 N이라고 할 때
+(N,E) 형태의 튜블로 인코딩하는 것을 의미한다.
 the element E.
 
 Example:
@@ -193,9 +193,10 @@ Example:
 
 ### P11 (easy)
 
-Modified run-length encoding. Modify the result of problem P10 in such a way
-that if an element has no duplicates it is simply copied into the result list.
-Only elements with duplicates are transferred as (N, E) terms.
+P10의 결과값을 사용하여 주어진 리스트를 수정된 run-length encoding하여 반환하는 함수를 작성하시오.
+수정된 run-length encoding이란 일반적인 run-length encoding과 같이 연속하여 중복된 원소를 (N,E) 형태의 튜플로
+인코딩하나 중복되지 않은 원소는 튜플이 아닌 원소 그 자체만을 리스트에 삽입하는 방법을 의미한다.
+즉, 연속하여 중복되어진 원소들만을 (N, E) 튜플 형태로 인코딩하도록 작성한다.
 
 Example:
 
@@ -204,8 +205,8 @@ Example:
 
 ### P12 (medium)
 
-Decode a run-length encoded list. Given a run-length code list generated as
-specified in problem P10, construct its uncompressed version.
+Run-length encoding 된 리스트를 디코딩하는 함수를 작성하시오. 입력으로는 P10의 인코딩 결과물이 주어지며,
+출력으로는 P10에 입력된 것과 같이 압축되지 않은 리스트를 반환하도록 작성한다.
 
 Example:
 
@@ -214,9 +215,7 @@ Example:
 
 ### P13 (medium)
 
-Run-length encoding of a list (direct solution). Implement the so-called
-run-length encoding data compression method directly. I.e. don't use other
-methods you've written (like P09's pack); do all the work directly.
+P09의 pack 등 기존에 작성했던 솔루션들을 활용하지 말고 주어진 리스트를 Run-length encoding하여 반환하는 함수를 작성하시오.
 
 Example:
 
@@ -225,7 +224,7 @@ Example:
 
 ### P14 (easy)
 
-Duplicate the elements of a list.
+리스트의 원소들을 복제하는 함수를 작성하시오.
 
 Example:
 
@@ -234,7 +233,7 @@ Example:
 
 ### P15 (medium)
 
-Duplicate the elements of a list a given number of times.
+리스트의 원소들을 주어진 숫자만큼 복제하는 함수를 작성하시오.
 
 Example:
 
@@ -243,7 +242,7 @@ Example:
 
 ### P16 (medium)
 
-Drop every Nth element from a list.
+리스트에서 모든 N번째 원소를 제거하는 함수를 작성하시오. (예) N=3일때, 3, 6, 9 ... 번째 원소를 제거
 
 Example:
 
@@ -252,8 +251,8 @@ Example:
 
 ### P17 (easy)
 
-Split a list into two parts. The length of the first part is given. Use a
-`Tuple` for your result.
+리스트를 두 부분으로 분리하는 함수를 작성하시오. 첫 부분의 길이는 입력으로 주어지며,
+결과를 튜플 형태로 반환하시오.
 
 Example:
 
@@ -262,10 +261,9 @@ Example:
 
 ### P18 (medium)
 
-Extract a slice from a list. Given two indices, I and K, the slice is the list
-containing the elements from and including the Ith element up to but not
-including the Kth element of the original list. Start counting the elements
-with 0.
+리스트에서 조각(slice)를 추출하는 함수를 작성하시오. 두 개의 인덱스 I, K가 입력으로 주어지며, 
+추출된 조각은 I번째 원소부터 K번째 원소 직전까지를 포함, [I,K) 하도록 작성한다. 리스트의 인덱스는
+0번부터 시작한다.
 
 Example:
 
@@ -274,7 +272,7 @@ Example:
 
 ### P19 (medium)
 
-Rotate a list N places to the left.
+리스트를 왼쪽으로 N번 회전시키는 함수를 작성하시오. 음수가 입력된 경우에는 오른쪽으로 abs(N)번 만큼 회진시키시오.
 
 Examples:
 
@@ -286,8 +284,8 @@ Examples:
 
 ### P20 (easy)
 
-Remove the Kth element from a list. Return the list and the removed element in
-a `Tuple`. Elements are numbered from 0.
+리스트에서 K번째 원소를 제거하는 함수를 작성하시오. 해당 원소가 제거된 리스트와 삭제된 원소를 튜플로
+묶어서 반환하도록 작성하며, 리스트의 인덱스는 0번부터 시작한다.
 
 Example:
 
@@ -296,7 +294,7 @@ Example:
 
 ### P21 (easy)
 
-Insert an element at a given position into a list.
+리스트 내 주어진 인덱스에 원소를 삽입하는 함수를 작성하시오.
 
 Example:
 
@@ -305,7 +303,8 @@ Example:
 
 ### P22 (easy)
 
-Create a list containing all integers within a given range.
+주어진 범위 내의 모든 정수들을 포함하는 리스트를 반환하는 함수를 작성하시오. 
+(예) 4와 9가 입력으로 주어진 경우, 4부터 9까지의 모든 정수를 포함하는 리스트를 반환한다.
 
 Example:
 
