@@ -2,10 +2,10 @@ package org.p99.scala
 
 object P07 {
 
-  def flatten(list:List[Any]):List[Any] = list match {
+  def flatten[T](list:List[Any]):List[T] = list match {
     case Nil => Nil
-    case (head: List[Any]) :: tail => flatten(head) ::: flatten(tail)
-    case head :: tail => head :: flatten(tail)
+    case (head: List[T]) :: tail => flatten(head) ::: flatten(tail)
+    case (head:T) :: tail => head :: flatten(tail)
   }
 
 }
