@@ -183,8 +183,7 @@ Example:
 
 P09의 결과값을 사용하여 주어진 리스트를 Run-length encoding하여 반환하는 함수를 작성하시오.
 Run-length encoding이란 데이터 압축 방법 중의 하나로, 연속하여 중복된 원소를 E, 중복된 횟수를 N이라고 할 때
-(N,E) 형태의 튜블로 인코딩하는 것을 의미한다.
-the element E.
+(N,E) 형태의 튜플로 인코딩하는 것을 의미한다.
 
 Example:
 
