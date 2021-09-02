@@ -271,7 +271,7 @@ Example:
 
 ### P19 (medium)
 
-리스트를 왼쪽으로 N번 회전시키는 함수를 작성하시오. 음수가 입력된 경우에는 오른쪽으로 abs(N)번 만큼 회진시키시오.
+리스트를 왼쪽으로 N번 회전시키는 함수를 작성하시오. 음수가 입력된 경우에는 오른쪽으로 abs(N)번 만큼 회전시키시오.
 
 Examples:
 
@@ -312,14 +312,14 @@ Example:
 
 ### P23 (medium)
 
-Extract a given number of randomly selected elements from a list.
+리스트에서 주어진 수 만큼의 랜덤한 원소를 뽑아내는 함수를 작성하시오.
+
+힌트 : P20의 답을 활용할 수 있음
 
 Example:
 
-    scala> randomSelect(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h))
+    scala> randomSelect(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h))
     res0: List[Symbol] = List('e, 'd, 'a)
-
-Hint: Use the solution to problem P20
 
 ### P24 (easy)
 
@@ -334,12 +334,12 @@ Example:
 
 Generate a random permutation of the elements of a list.
 
+Hint: Use the solution of problem P23.
+
 Example:
 
     scala> randomPermute(List('a, 'b, 'c, 'd, 'e, 'f))
     res0: List[Symbol] = List('b, 'a, 'd, 'c, 'e, 'f)
-
-Hint: Use the solution of problem P23.
 
 ### P26 (medium)
 
